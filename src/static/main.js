@@ -1,5 +1,5 @@
-var grid = document.querySelector('.note-grid')
-var msnry = new Masonry( grid, {
+let grid = document.querySelector('.note-grid')
+let msnry = new Masonry( grid, {
   percentPosition: true,
   itemSelector: '.note-col',
   columnWidth: '.note-col',
@@ -12,7 +12,7 @@ var msnry = new Masonry( grid, {
 //  */
 
 function truncateNote(noteStr) {
-  var limit = 250;
+  let limit = 250;
   if (noteStr.length > limit) {
     return noteStr.slice(0, limit) + "...";
   } else {
@@ -57,7 +57,7 @@ function editNote(noteId, noteData) {
 }
 
 let modalElement = document.querySelector("#noteViewModal")
-var note_Modal = new bootstrap.Modal(modalElement, {
+let note_Modal = new bootstrap.Modal(modalElement, {
   backdrop: true
 })
 
@@ -117,7 +117,7 @@ function noteModal(noteId)
 }
 
 let new_note_modalElement = document.querySelector("#newNoteModal")
-var new_note_Modal = new bootstrap.Modal(new_note_modalElement, {
+let new_note_Modal = new bootstrap.Modal(new_note_modalElement, {
     backdrop: true
 })
 
